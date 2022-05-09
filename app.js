@@ -4,7 +4,7 @@ const mongoose=require("mongoose");
 const exhbs=require("express-handlebars");
 const placeroutes=require("./routes/places")
 
-const uri="mongodb+srv://baris:baris1@cluster0.epqge.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const uri="mongodb+srv://baris1234:baris1234@cluster0.epqge.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 const hbs = exhbs.create({
     defaultLayout:'main',
@@ -18,8 +18,6 @@ const hbs = exhbs.create({
     app.use("/",placeroutes);
 
 const port=3000;
-app.listen(port);
-console.log(`Listening to server: http://localhost:${port}`);
 
 async function start(){
     try {
@@ -29,8 +27,9 @@ async function start(){
         })
     
         
-    app.listen(PORT,()=>{
-        console.log("Server Running")
+    app.listen(port,()=>{
+        console.log(`Listening to server: http://localhost:${port}`);
+
     })
     
     } catch (error) {
@@ -38,3 +37,5 @@ async function start(){
     }
     
     }
+
+    start()
