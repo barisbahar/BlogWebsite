@@ -1,0 +1,25 @@
+<div class="row">
+    <form class="col s12" action="/editplace" method="post">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="placeName" name="placeName" type="text" class="validate" value="{{place.title}}">
+                <label class="active" for="placeName">Place Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="placeImage" name="placeImage" type="text" class="validate" value="{{place.image}}">
+                <label class="active" for="placeImage">Place Image Link</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="placeDesc" name="placeDesc" type="text" class="validate" value="{{place.description}}">
+                <label for="placeDesc">Place Description</label>
+            </div>
+        </div>
+        <button class="btn waves-effect waves-light red darken-1" type="submit" name="action">Update
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+</div>

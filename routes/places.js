@@ -25,6 +25,19 @@ router.post("/addplace",async(req,res)=>{
     await placecontroller.create(place);
     res.redirect('/')
 })
+router.get("/editplace/:id",async(req,res)=>{
+    const placedata=await placecontroller.getById(req.params.id);
+    const place= {
+        title:placedata.title,
+        image:placedata.image,
+        description:placedata.description,
+        _id:req.params.id,
+    }; 
+    res.render('editplaces',{
+        title:"Edit Places",
+        place
+    })
+})
 
 
 module.exports = router;
