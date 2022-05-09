@@ -1,0 +1,25 @@
+<div class="row">
+    <form class="col s12" action="/addplaces.hbs" method="post">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="placeName" name="placeName" type="text" class="validate">
+                <label class="active" for="placeName">Place Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="placeImage" name="placeImage" type="text" class="validate">
+                <label class="active" for="placeImage">Place Image Link</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="placeDesc" name="placeDesc" type="text" class="validate">
+                <label for="placeDesc">Place Description</label>
+            </div>
+        </div>
+        <button class="btn waves-effect waves-light red darken-1" type="submit" name="action">Send
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+</div>

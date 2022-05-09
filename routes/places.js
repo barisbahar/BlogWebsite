@@ -6,6 +6,11 @@ router.get("/", async (req, res) => {
     })
 });
 
+router.get("/addplace",async(req,res)=>{
+    res.render('addplaces',{
+        title:"Add Places"
+    })
+})
 
 
 module.exports = router;
