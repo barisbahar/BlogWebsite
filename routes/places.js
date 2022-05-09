@@ -39,5 +39,19 @@ router.get("/editplace/:id",async(req,res)=>{
     })
 })
 
+router.post("/editplace",async(req,res)=>{
+    const place=new Place({
+        title:req.body.placeName,
+        image:req.body.placeImage,
+        description:req.body.placeDesc,
+    });
+    await placecontroller.update(req.body._id,place);
+    res.redirect('/')
+})
+
+router.get("/delete/:id",async(req,res)=>{
+ await placecontroller.delete(req.params.id)
+ res.redirect('/')
+})
 
 module.exports = router;
