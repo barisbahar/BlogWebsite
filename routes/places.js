@@ -54,4 +54,17 @@ router.get("/delete/:id",async(req,res)=>{
  res.redirect('/')
 })
 
+router.get("/placeinfo/:id",async(req,res)=>{
+    const placedata=await placecontroller.getById(req.params.id);
+    const place= {
+        title:placedata.title,
+        image:placedata.image,
+        description:placedata.description,
+        _id:req.params.id,
+    }; 
+    res.render('placeinformation',{
+        title:"Place Information",
+        place
+    })
+})
 module.exports = router;
