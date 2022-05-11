@@ -27,7 +27,7 @@ async function start(){
         })
     
         
-    app.listen(port,()=>{
+    app.listen(process.env.PORT||port,()=>{
         console.log(`Listening to server: http://localhost:${port}`);
 
     })
